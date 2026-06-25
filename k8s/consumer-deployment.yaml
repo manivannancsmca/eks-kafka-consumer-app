@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: consumer
-        image: manivannancsmca/kafka-consumer:PLACEHOLDER
+        image: manivannancsmca/kafka-consumer:fbc98dca44d7ffeeabff74c7364436e2d3b1ac87
 
         ports:
         - containerPort: 8081
