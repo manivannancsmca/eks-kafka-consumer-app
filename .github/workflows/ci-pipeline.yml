@@ -30,7 +30,6 @@ jobs:
 
       - name: Build Spring Boot Application
         run: |
-          cd consumer-app
           mvn clean package -DskipTests
 
       - name: Log in to Docker Hub
@@ -42,8 +41,7 @@ jobs:
       - name: Build Docker Image
         run: |
           docker build \
-            -t ${{ secrets.DOCKERHUB_USERNAME }}/kafka-consumer:${{ github.sha }} \
-            ./consumer-app
+            -t ${{ secrets.DOCKERHUB_USERNAME }}/kafka-consumer:${{ github.sha }} .
 
       - name: Push Docker Image
         run: |
