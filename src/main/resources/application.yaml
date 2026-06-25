@@ -11,4 +11,4 @@ spring:
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
       properties:
-        spring.json.trusted.packages: "com.example.kafka.model"
+        spring.json.trusted.packages: "com.eks_kafka_consumer_app.model"
