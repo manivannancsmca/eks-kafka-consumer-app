@@ -9,6 +9,7 @@ import com.eks_kafka_consumer_app.model.OrderEvent;
 
 @Service
 public class OrderConsumerService {
+    
     private static final Logger logger = LoggerFactory.getLogger(OrderConsumerService.class);
 
     @KafkaListener(topics = "orders-topic", groupId = "orders-group")
